@@ -43,7 +43,7 @@ const Navbar = () => {
             onClick={() => scrollToSection("features")}
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            Features
+            Fitur
           </button>
           <button
             onClick={() => scrollToSection("demo")}
@@ -55,17 +55,17 @@ const Navbar = () => {
             onClick={() => scrollToSection("docs")}
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            Documentation
+            Dokumentasi
           </button>
         </div>
 
         <div className="hidden md:flex items-center gap-3">
           <ThemeToggle />
           <Button variant="ghost" onClick={() => scrollToSection("docs")}>
-            View Docs
+            Lihat Docs
           </Button>
           <Button className="gradient-primary glow-primary hover:opacity-90 transition-opacity">
-            Download APK
+            Unduh APK
           </Button>
         </div>
 
@@ -86,7 +86,7 @@ const Navbar = () => {
               onClick={() => scrollToSection("features")}
               className="text-muted-foreground hover:text-foreground transition-colors text-left py-2"
             >
-              Features
+              Fitur
             </button>
             <button
               onClick={() => scrollToSection("demo")}
@@ -98,17 +98,17 @@ const Navbar = () => {
               onClick={() => scrollToSection("docs")}
               className="text-muted-foreground hover:text-foreground transition-colors text-left py-2"
             >
-              Documentation
+              Dokumentasi
             </button>
             <div className="flex flex-col gap-2 pt-2 border-t border-border">
               <div className="flex items-center justify-between">
-                <span className="text-sm text-muted-foreground">Theme</span>
+                <span className="text-sm text-muted-foreground">Tema</span>
                 <ThemeToggle />
               </div>
               <Button variant="ghost" onClick={() => scrollToSection("docs")}>
-                View Docs
+                Lihat Docs
               </Button>
-              <Button className="gradient-primary glow-primary">Download APK</Button>
+              <Button className="gradient-primary glow-primary">Unduh APK</Button>
             </div>
           </div>
         </div>
