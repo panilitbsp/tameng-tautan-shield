@@ -23,10 +23,10 @@ const PhoneMockup = () => {
           {/* Chat Messages Background */}
           <div className="px-4 py-2 mt-6 space-y-3">
             <div className="bg-slate-700/50 rounded-lg p-3 max-w-[80%] ml-auto">
-              <p className="text-xs text-slate-100">Hey, check this link!</p>
+              <p className="text-xs text-slate-100">Hei, cek tautan ini!</p>
             </div>
             <div className="bg-slate-800 rounded-lg p-3 max-w-[80%]">
-              <p className="text-xs text-slate-300">Here's the file you asked for:</p>
+              <p className="text-xs text-slate-300">Ini file yang kamu minta:</p>
               <p className="text-xs text-purple-400 underline mt-1">bit.ly/3x7K9mN</p>
             </div>
           </div>
@@ -37,7 +37,7 @@ const PhoneMockup = () => {
             <div className="gradient-danger px-4 py-3 flex items-center gap-2">
               <AlertTriangle className="w-5 h-5 text-white" />
               <span className="text-sm font-semibold text-white">
-                Dangerous link found!
+                Tautan berbahaya ditemukan!
               </span>
             </div>
 
@@ -47,13 +47,13 @@ const PhoneMockup = () => {
               <div className="text-center">
                 <div className="inline-flex items-center gap-2 bg-red-500/20 px-4 py-2 rounded-full">
                   <span className="text-2xl font-bold text-red-500">53%</span>
-                  <span className="text-sm font-medium text-red-500">HIGH RISK</span>
+                  <span className="text-sm font-medium text-red-500">RISIKO TINGGI</span>
                 </div>
               </div>
 
               {/* URL Display */}
               <div className="bg-slate-700/50 rounded-lg p-3">
-                <p className="text-xs text-slate-400 mb-1">Detected URL:</p>
+                <p className="text-xs text-slate-400 mb-1">URL Terdeteksi:</p>
                 <p className="text-xs text-slate-100 font-mono break-all">
                   bit.ly/3x7K9mN → fake-bank-login.xyz
                 </p>
@@ -63,11 +63,11 @@ const PhoneMockup = () => {
               <div className="flex gap-2">
                 <button className="flex-1 flex items-center justify-center gap-1 bg-slate-700 hover:bg-slate-600 rounded-lg py-2.5 text-sm font-medium text-slate-100 transition-colors">
                   <X className="w-4 h-4" />
-                  Close
+                  Tutup
                 </button>
                 <button className="flex-1 flex items-center justify-center gap-1 bg-purple-600 hover:bg-purple-500 rounded-lg py-2.5 text-sm font-medium text-white transition-colors">
                   <ExternalLink className="w-4 h-4" />
-                  Details
+                  Detail
                 </button>
               </div>
             </div>

@@ -14,26 +14,26 @@ const docsSections = [
   {
     id: "getting-started",
     icon: Rocket,
-    title: "Getting Started",
+    title: "Memulai",
     content: {
-      title: "Getting Started with Tameng Tautan",
-      description: "Learn how to set up and configure Tameng Tautan for optimal protection.",
+      title: "Memulai dengan Tameng Tautan",
+      description: "Pelajari cara mengatur dan mengkonfigurasi Tameng Tautan untuk perlindungan optimal.",
       steps: [
         {
-          title: "1. Download and Install",
-          content: "Download the APK file from our website and install it on your Android device. You may need to enable 'Install from unknown sources' in your device settings."
+          title: "1. Unduh dan Instal",
+          content: "Unduh file APK dari situs web kami dan instal di perangkat Android Anda. Anda mungkin perlu mengaktifkan 'Instal dari sumber tidak dikenal' di pengaturan perangkat."
         },
         {
-          title: "2. Enable Accessibility Service",
-          content: "Go to Settings → Accessibility → Tameng Tautan and enable the service. This allows the app to monitor links appearing on your screen."
+          title: "2. Aktifkan Layanan Aksesibilitas",
+          content: "Buka Pengaturan → Aksesibilitas → Tameng Tautan dan aktifkan layanannya. Ini memungkinkan aplikasi memantau tautan yang muncul di layar Anda."
         },
         {
-          title: "3. Grant Overlay Permission",
-          content: "When prompted, allow Tameng Tautan to display over other apps. This is required to show security warnings when threats are detected."
+          title: "3. Berikan Izin Overlay",
+          content: "Saat diminta, izinkan Tameng Tautan untuk menampilkan di atas aplikasi lain. Ini diperlukan untuk menampilkan peringatan keamanan saat ancaman terdeteksi."
         },
         {
-          title: "4. You're Protected!",
-          content: "Tameng Tautan will now run silently in the background, analyzing every link that appears on your screen."
+          title: "4. Anda Sudah Terlindungi!",
+          content: "Tameng Tautan sekarang akan berjalan diam-diam di latar belakang, menganalisis setiap tautan yang muncul di layar Anda."
         }
       ]
     }
@@ -41,30 +41,30 @@ const docsSections = [
   {
     id: "how-it-works",
     icon: Cog,
-    title: "How It Works",
+    title: "Cara Kerja",
     content: {
-      title: "Understanding the Technology",
-      description: "Dive deep into how Tameng Tautan protects you from phishing attacks.",
+      title: "Memahami Teknologinya",
+      description: "Pelajari lebih dalam bagaimana Tameng Tautan melindungi Anda dari serangan phishing.",
       steps: [
         {
-          title: "Screen Monitoring",
-          content: "Using Android's Accessibility API, Tameng Tautan monitors text content displayed on your screen without capturing any personal data."
+          title: "Pemantauan Layar",
+          content: "Menggunakan API Aksesibilitas Android, Tameng Tautan memantau konten teks yang ditampilkan di layar Anda tanpa menangkap data pribadi apa pun."
         },
         {
-          title: "URL Detection",
-          content: "Our regex engine identifies URLs in the monitored text, including shortened links from services like bit.ly, s.id, and t.co."
+          title: "Deteksi URL",
+          content: "Mesin regex kami mengidentifikasi URL dalam teks yang dipantau, termasuk tautan pendek dari layanan seperti bit.ly, s.id, dan t.co."
         },
         {
-          title: "Link Expansion",
-          content: "Shortened URLs are automatically expanded to reveal their true destination, exposing potentially malicious redirects."
+          title: "Perluasan Tautan",
+          content: "URL pendek secara otomatis diperluas untuk mengungkap tujuan sebenarnya, mengekspos redirect yang berpotensi berbahaya."
         },
         {
-          title: "ML Classification",
-          content: "The XGBoost model analyzes URL features including domain age, path structure, keyword patterns, and character entropy to calculate a risk score."
+          title: "Klasifikasi ML",
+          content: "Model XGBoost menganalisis fitur URL termasuk usia domain, struktur path, pola kata kunci, dan entropi karakter untuk menghitung skor risiko."
         },
         {
-          title: "Alert Generation",
-          content: "If the risk score exceeds your configured threshold, a warning overlay appears with details about the threat."
+          title: "Pembuatan Peringatan",
+          content: "Jika skor risiko melebihi ambang yang Anda konfigurasikan, overlay peringatan muncul dengan detail tentang ancaman tersebut."
         }
       ]
     }
@@ -72,26 +72,26 @@ const docsSections = [
   {
     id: "configuration",
     icon: Settings,
-    title: "Configuration",
+    title: "Konfigurasi",
     content: {
-      title: "Customizing Your Protection",
-      description: "Learn how to fine-tune Tameng Tautan to match your security preferences.",
+      title: "Menyesuaikan Perlindungan Anda",
+      description: "Pelajari cara menyesuaikan Tameng Tautan sesuai preferensi keamanan Anda.",
       steps: [
         {
-          title: "Risk Threshold",
-          content: "Adjust the sensitivity slider (0.1 to 0.9) to control when alerts are triggered. Lower values = more alerts, higher values = fewer alerts. Default: 0.5"
+          title: "Ambang Risiko",
+          content: "Sesuaikan slider sensitivitas (0.1 hingga 0.9) untuk mengontrol kapan peringatan dipicu. Nilai lebih rendah = lebih banyak peringatan, nilai lebih tinggi = lebih sedikit peringatan. Default: 0.5"
         },
         {
-          title: "Detection Model",
-          content: "Choose between 'Standard' mode for balanced detection or 'Aggressive' mode for maximum security (may produce more false positives)."
+          title: "Model Deteksi",
+          content: "Pilih antara mode 'Standar' untuk deteksi seimbang atau mode 'Agresif' untuk keamanan maksimal (mungkin menghasilkan lebih banyak false positive)."
         },
         {
-          title: "App Whitelist",
-          content: "Exclude specific apps from monitoring if you trust them completely. Navigate to Settings → App Whitelist to manage exclusions."
+          title: "Whitelist Aplikasi",
+          content: "Kecualikan aplikasi tertentu dari pemantauan jika Anda sepenuhnya mempercayainya. Navigasikan ke Pengaturan → Whitelist Aplikasi untuk mengelola pengecualian."
         },
         {
-          title: "Notification Style",
-          content: "Choose between 'Overlay' (full-screen warning), 'Banner' (compact notification), or 'Silent' (logging only) modes."
+          title: "Gaya Notifikasi",
+          content: "Pilih antara mode 'Overlay' (peringatan layar penuh), 'Banner' (notifikasi kompak), atau 'Senyap' (hanya logging)."
         }
       ]
     }
@@ -101,28 +101,28 @@ const docsSections = [
     icon: HelpCircle,
     title: "FAQ",
     content: {
-      title: "Frequently Asked Questions",
-      description: "Answers to common questions about Tameng Tautan.",
+      title: "Pertanyaan yang Sering Diajukan",
+      description: "Jawaban untuk pertanyaan umum tentang Tameng Tautan.",
       steps: [
         {
-          title: "Does Tameng Tautan collect my data?",
-          content: "No. All processing happens entirely on your device. We don't collect, store, or transmit any of your personal data or browsing history."
+          title: "Apakah Tameng Tautan mengumpulkan data saya?",
+          content: "Tidak. Semua pemrosesan terjadi sepenuhnya di perangkat Anda. Kami tidak mengumpulkan, menyimpan, atau mengirimkan data pribadi atau riwayat browsing Anda."
         },
         {
-          title: "Why does it need Accessibility permission?",
-          content: "The Accessibility Service is required to read text content on your screen so we can detect URLs. We only use this for URL detection, nothing else."
+          title: "Mengapa butuh izin Aksesibilitas?",
+          content: "Layanan Aksesibilitas diperlukan untuk membaca konten teks di layar Anda sehingga kami dapat mendeteksi URL. Kami hanya menggunakannya untuk deteksi URL, tidak lebih."
         },
         {
-          title: "Does it slow down my phone?",
-          content: "No. The XGBoost model is highly optimized and processes URLs in under 50ms. The background service uses minimal battery."
+          title: "Apakah memperlambat ponsel saya?",
+          content: "Tidak. Model XGBoost sangat dioptimalkan dan memproses URL dalam waktu kurang dari 50ms. Layanan latar belakang menggunakan baterai minimal."
         },
         {
-          title: "Can I use it alongside other security apps?",
-          content: "Yes! Tameng Tautan is designed to complement existing security solutions. It focuses specifically on real-time phishing detection."
+          title: "Bisakah digunakan bersama aplikasi keamanan lain?",
+          content: "Ya! Tameng Tautan dirancang untuk melengkapi solusi keamanan yang ada. Ini fokus secara khusus pada deteksi phishing real-time."
         },
         {
-          title: "Is it free?",
-          content: "Yes, Tameng Tautan is completely free and open source. No ads, no premium features, no subscriptions."
+          title: "Apakah gratis?",
+          content: "Ya, Tameng Tautan sepenuhnya gratis dan open source. Tanpa iklan, tanpa fitur premium, tanpa langganan."
         }
       ]
     }
@@ -143,12 +143,12 @@ const DocsSection = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-primary font-medium text-sm uppercase tracking-wider">Documentation</span>
+          <span className="text-primary font-medium text-sm uppercase tracking-wider">Dokumentasi</span>
           <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6">
-            Everything You Need to <span className="text-gradient">Get Started</span>
+            Semua yang Anda Butuhkan untuk <span className="text-gradient">Memulai</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Comprehensive guides to help you set up and use Tameng Tautan effectively.
+            Panduan komprehensif untuk membantu Anda mengatur dan menggunakan Tameng Tautan secara efektif.
           </p>
         </div>
 

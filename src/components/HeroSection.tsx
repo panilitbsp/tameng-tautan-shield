@@ -26,25 +26,25 @@ const HeroSection = () => {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full animate-fade-in">
               <span className="w-2 h-2 bg-success rounded-full animate-pulse" />
-              <span className="text-sm text-muted-foreground">Powered by On-Device ML</span>
+              <span className="text-sm text-muted-foreground">Didukung ML On-Device</span>
             </div>
 
             {/* Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-slide-up">
-              Real-Time Protection Against{" "}
-              <span className="text-gradient">Phishing Links</span>
+              Perlindungan Real-Time dari{" "}
+              <span className="text-gradient">Tautan Phishing</span>
             </h1>
 
             {/* Sub-headline */}
             <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 animate-slide-up" style={{ animationDelay: "0.1s" }}>
-              Tameng Tautan runs silently in the background, analyzing every link on your screen before you click. Secure your digital life with on-device AI classification.
+              Tameng Tautan berjalan diam-diam di latar belakang, menganalisis setiap tautan di layar Anda sebelum diklik. Amankan kehidupan digital Anda dengan klasifikasi AI on-device.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-slide-up" style={{ animationDelay: "0.2s" }}>
               <Button size="lg" className="gradient-primary glow-primary hover:opacity-90 transition-all text-base px-8">
                 <Download className="w-5 h-5 mr-2" />
-                Download APK
+                Unduh APK
               </Button>
               <Button
                 size="lg"
@@ -53,7 +53,7 @@ const HeroSection = () => {
                 onClick={() => scrollToSection("docs")}
               >
                 <BookOpen className="w-5 h-5 mr-2" />
-                View Docs
+                Lihat Dokumentasi
               </Button>
             </div>
 
@@ -61,15 +61,15 @@ const HeroSection = () => {
             <div className="flex flex-wrap gap-8 justify-center lg:justify-start pt-4 animate-slide-up" style={{ animationDelay: "0.3s" }}>
               <div>
                 <p className="text-2xl md:text-3xl font-bold text-foreground">99.2%</p>
-                <p className="text-sm text-muted-foreground">Detection Rate</p>
+                <p className="text-sm text-muted-foreground">Tingkat Deteksi</p>
               </div>
               <div>
                 <p className="text-2xl md:text-3xl font-bold text-foreground">&lt;50ms</p>
-                <p className="text-sm text-muted-foreground">Analysis Time</p>
+                <p className="text-sm text-muted-foreground">Waktu Analisis</p>
               </div>
               <div>
                 <p className="text-2xl md:text-3xl font-bold text-foreground">0</p>
-                <p className="text-sm text-muted-foreground">Data Sent</p>
+                <p className="text-sm text-muted-foreground">Data Terkirim</p>
               </div>
             </div>
           </div>
@@ -82,7 +82,7 @@ const HeroSection = () => {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-          <span className="text-xs text-muted-foreground">Scroll to explore</span>
+          <span className="text-xs text-muted-foreground">Gulir untuk menjelajahi</span>
           <ChevronRight className="w-5 h-5 text-muted-foreground rotate-90" />
         </div>
       </div>
