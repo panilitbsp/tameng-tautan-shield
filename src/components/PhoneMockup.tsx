@@ -4,39 +4,39 @@ const PhoneMockup = () => {
   return (
     <div className="relative animate-float">
       {/* Phone Frame */}
-      <div className="relative w-[280px] md:w-[320px] h-[560px] md:h-[640px] bg-secondary rounded-[3rem] p-3 shadow-2xl">
+      <div className="relative w-[280px] md:w-[320px] h-[560px] md:h-[640px] bg-slate-800 rounded-[3rem] p-3 shadow-2xl">
         {/* Screen */}
-        <div className="relative w-full h-full bg-background rounded-[2.5rem] overflow-hidden">
+        <div className="relative w-full h-full bg-slate-900 rounded-[2.5rem] overflow-hidden">
           {/* Status Bar */}
-          <div className="flex justify-between items-center px-6 py-2 text-xs text-muted-foreground">
+          <div className="flex justify-between items-center px-6 py-2 text-xs text-slate-400">
             <span>9:41</span>
             <div className="flex gap-1">
-              <div className="w-4 h-2 bg-muted-foreground rounded-sm" />
-              <div className="w-4 h-2 bg-muted-foreground rounded-sm" />
-              <div className="w-6 h-3 bg-success rounded-sm" />
+              <div className="w-4 h-2 bg-slate-500 rounded-sm" />
+              <div className="w-4 h-2 bg-slate-500 rounded-sm" />
+              <div className="w-6 h-3 bg-green-500 rounded-sm" />
             </div>
           </div>
 
           {/* App Background - WhatsApp Style */}
-          <div className="absolute inset-0 top-8 bg-card opacity-50" />
+          <div className="absolute inset-0 top-8 bg-slate-800 opacity-50" />
           
           {/* Chat Messages Background */}
           <div className="px-4 py-2 mt-6 space-y-3">
-            <div className="bg-muted/50 rounded-lg p-3 max-w-[80%] ml-auto">
-              <p className="text-xs text-foreground">Hey, check this link!</p>
+            <div className="bg-slate-700/50 rounded-lg p-3 max-w-[80%] ml-auto">
+              <p className="text-xs text-slate-100">Hey, check this link!</p>
             </div>
-            <div className="bg-secondary rounded-lg p-3 max-w-[80%]">
-              <p className="text-xs text-muted-foreground">Here's the file you asked for:</p>
-              <p className="text-xs text-primary underline mt-1">bit.ly/3x7K9mN</p>
+            <div className="bg-slate-800 rounded-lg p-3 max-w-[80%]">
+              <p className="text-xs text-slate-300">Here's the file you asked for:</p>
+              <p className="text-xs text-purple-400 underline mt-1">bit.ly/3x7K9mN</p>
             </div>
           </div>
 
           {/* Security Overlay */}
-          <div className="absolute inset-x-3 top-1/4 glass-card rounded-2xl overflow-hidden animate-pulse-glow">
+          <div className="absolute inset-x-3 top-1/4 bg-slate-800/95 backdrop-blur-xl border border-slate-700/50 rounded-2xl overflow-hidden animate-pulse-glow">
             {/* Overlay Header */}
             <div className="gradient-danger px-4 py-3 flex items-center gap-2">
-              <AlertTriangle className="w-5 h-5 text-destructive-foreground" />
-              <span className="text-sm font-semibold text-destructive-foreground">
+              <AlertTriangle className="w-5 h-5 text-white" />
+              <span className="text-sm font-semibold text-white">
                 Dangerous link found!
               </span>
             </div>
@@ -45,27 +45,27 @@ const PhoneMockup = () => {
             <div className="p-4 space-y-4">
               {/* Risk Score */}
               <div className="text-center">
-                <div className="inline-flex items-center gap-2 bg-destructive/20 px-4 py-2 rounded-full">
-                  <span className="text-2xl font-bold text-destructive">53%</span>
-                  <span className="text-sm font-medium text-destructive">HIGH RISK</span>
+                <div className="inline-flex items-center gap-2 bg-red-500/20 px-4 py-2 rounded-full">
+                  <span className="text-2xl font-bold text-red-500">53%</span>
+                  <span className="text-sm font-medium text-red-500">HIGH RISK</span>
                 </div>
               </div>
 
               {/* URL Display */}
-              <div className="bg-muted/50 rounded-lg p-3">
-                <p className="text-xs text-muted-foreground mb-1">Detected URL:</p>
-                <p className="text-xs text-foreground font-mono break-all">
+              <div className="bg-slate-700/50 rounded-lg p-3">
+                <p className="text-xs text-slate-400 mb-1">Detected URL:</p>
+                <p className="text-xs text-slate-100 font-mono break-all">
                   bit.ly/3x7K9mN → fake-bank-login.xyz
                 </p>
               </div>
 
               {/* Action Buttons */}
               <div className="flex gap-2">
-                <button className="flex-1 flex items-center justify-center gap-1 bg-muted hover:bg-muted/80 rounded-lg py-2.5 text-sm font-medium text-foreground transition-colors">
+                <button className="flex-1 flex items-center justify-center gap-1 bg-slate-700 hover:bg-slate-600 rounded-lg py-2.5 text-sm font-medium text-slate-100 transition-colors">
                   <X className="w-4 h-4" />
                   Close
                 </button>
-                <button className="flex-1 flex items-center justify-center gap-1 bg-accent hover:bg-accent/80 rounded-lg py-2.5 text-sm font-medium text-foreground transition-colors">
+                <button className="flex-1 flex items-center justify-center gap-1 bg-purple-600 hover:bg-purple-500 rounded-lg py-2.5 text-sm font-medium text-white transition-colors">
                   <ExternalLink className="w-4 h-4" />
                   Details
                 </button>
@@ -74,13 +74,13 @@ const PhoneMockup = () => {
           </div>
 
           {/* Bottom Navigation Bar */}
-          <div className="absolute bottom-0 inset-x-0 h-12 bg-secondary/80 backdrop-blur flex items-center justify-center">
-            <div className="w-32 h-1 bg-muted-foreground rounded-full" />
+          <div className="absolute bottom-0 inset-x-0 h-12 bg-slate-800/80 backdrop-blur flex items-center justify-center">
+            <div className="w-32 h-1 bg-slate-500 rounded-full" />
           </div>
         </div>
 
         {/* Notch */}
-        <div className="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-6 bg-background rounded-full" />
+        <div className="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-6 bg-slate-900 rounded-full" />
       </div>
 
       {/* Glow Effect */}
