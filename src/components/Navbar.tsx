@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Shield, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -59,6 +60,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
+          <ThemeToggle />
           <Button variant="ghost" onClick={() => scrollToSection("docs")}>
             View Docs
           </Button>
@@ -99,6 +101,10 @@ const Navbar = () => {
               Documentation
             </button>
             <div className="flex flex-col gap-2 pt-2 border-t border-border">
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-muted-foreground">Theme</span>
+                <ThemeToggle />
+              </div>
               <Button variant="ghost" onClick={() => scrollToSection("docs")}>
                 View Docs
               </Button>
