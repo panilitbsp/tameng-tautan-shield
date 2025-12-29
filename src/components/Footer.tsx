@@ -14,8 +14,8 @@ const Footer = () => {
               <span className="text-xl font-bold text-foreground">Tameng Tautan</span>
             </div>
             <p className="text-muted-foreground max-w-sm mb-6">
-              Perlindungan phishing real-time yang didukung machine learning on-device. 
-              Keamanan Anda, privasi Anda, kendali Anda.
+              Real-time phishing protection powered by on-device machine learning. 
+              Your security, your privacy, your control.
             </p>
             <div className="flex gap-4">
               <a
@@ -35,11 +35,11 @@ const Footer = () => {
 
           {/* Links */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Produk</h4>
+            <h4 className="font-semibold text-foreground mb-4">Product</h4>
             <ul className="space-y-3">
               <li>
                 <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Fitur
+                  Features
                 </a>
               </li>
               <li>
@@ -49,7 +49,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Unduh APK
+                  Download APK
                 </a>
               </li>
               <li>
@@ -61,21 +61,21 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Dokumentasi</h4>
+            <h4 className="font-semibold text-foreground mb-4">Documentation</h4>
             <ul className="space-y-3">
               <li>
                 <a href="#docs" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Memulai
+                  Getting Started
                 </a>
               </li>
               <li>
                 <a href="#docs" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Cara Kerja
+                  How It Works
                 </a>
               </li>
               <li>
                 <a href="#docs" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Konfigurasi
+                  Configuration
                 </a>
               </li>
               <li>
@@ -90,10 +90,10 @@ const Footer = () => {
         {/* Bottom */}
         <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2024 Tameng Tautan. Hak cipta dilindungi.
+            © 2024 Tameng Tautan. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground flex items-center gap-1">
-            Dibuat dengan <Heart className="w-4 h-4 text-destructive" /> untuk internet yang lebih aman
+            Made with <Heart className="w-4 h-4 text-destructive" /> for a safer internet
           </p>
         </div>
       </div>

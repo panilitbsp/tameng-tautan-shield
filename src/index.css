@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+/* 1. GANTI IMPORT FONT DISINI: Menggunakan Plus Jakarta Sans */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=JetBrains+Mono:wght@400;500&display=swap");
 
 @layer base {
   :root {
@@ -117,11 +118,13 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', sans-serif;
+    /* 2. UPDATE FONT DISINI: Mengganti 'Inter' jadi 'Plus Jakarta Sans' */
+    font-family: "Plus Jakarta Sans", sans-serif;
   }
 
-  code, pre {
-    font-family: 'JetBrains Mono', monospace;
+  code,
+  pre {
+    font-family: "JetBrains Mono", monospace;
   }
 }
 
@@ -175,7 +178,8 @@
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -184,7 +188,8 @@
 }
 
 @keyframes pulse-glow {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 20px hsl(0 72% 51% / 0.4);
   }
   50% {
