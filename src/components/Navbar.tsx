@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Shield, Menu, X, FlaskConical } from "lucide-react"; // flaskConical utk icon testing
+import { Shield, Menu, X, FlaskConical } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ThemeToggle from "./ThemeToggle";
 
@@ -15,7 +15,8 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id) => {
+  // Tetap simpan ini untuk navigasi internal (Features, Demo, Docs)
+  const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -23,9 +24,21 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
   };
 
+  // FUNGSI BARU: Handle Testing
+  const handleTesting = () => {
+    const link = document.createElement("a");
+    link.href = "https://forms.gle/k2aHLvfrDdRFn8pf6";
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    setIsMobileMenuOpen(false); // Tutup menu mobile jika sedang terbuka
+  };
+
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "./app/TamengTautan.apk"; // Pastikan file ini ada di folder /public
+    link.href = "./app/TamengTautan.apk";
     link.download = "TamengTautan.apk";
     document.body.appendChild(link);
     link.click();
@@ -51,7 +64,6 @@ const Navbar = () => {
           <button onClick={() => scrollToSection("demo")} className="text-gray-600 hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-400 transition-colors font-medium">
             Demo
           </button>
-          {/* Docs dipindah kesini */}
           <button onClick={() => scrollToSection("docs")} className="text-gray-600 hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-400 transition-colors font-medium">
             Docs
           </button>
@@ -61,12 +73,12 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-3">
           <ThemeToggle />
 
-          {/* Button Testing (Neutral/Ghost Style) */}
-          <Button variant="ghost" onClick={() => scrollToSection("testing")} className="text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">
+          {/* Button Testing (Update onClick) */}
+          <Button variant="ghost" onClick={handleTesting} className="text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">
             Coba Testing
           </Button>
 
-          {/* Button Download (Primary Style) */}
+          {/* Button Download */}
           <Button onClick={handleDownload} className="bg-gradient-to-r from-purple-600 to-blue-600 hover:opacity-90 transition-opacity text-white shadow-lg shadow-purple-500/25 border-0">
             Download APK
           </Button>
@@ -97,9 +109,12 @@ const Navbar = () => {
                 <span className="text-sm text-gray-500">Mode Tampilan</span>
                 <ThemeToggle />
               </div>
-              <Button variant="outline" onClick={() => scrollToSection("testing")} className="w-full justify-center border-gray-300 dark:border-gray-700">
+
+              {/* Mobile Button Testing (Update onClick) */}
+              <Button variant="outline" onClick={handleTesting} className="w-full justify-center border-gray-300 dark:border-gray-700">
                 Coba Testing
               </Button>
+
               <Button onClick={handleDownload} className="w-full justify-center bg-gradient-to-r from-purple-600 to-blue-600 text-white border-0">
                 Download APK
               </Button>

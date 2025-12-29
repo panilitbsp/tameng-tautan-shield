@@ -2,18 +2,20 @@ import { Button } from "@/components/ui/button";
 import { Download, FlaskConical, Shield } from "lucide-react";
 
 const CTASection = () => {
-  // 1. Fungsi Scroll ke section Testing (Sama seperti di Hero)
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  // FUNGSI BARU: Handle Testing
+  const handleTesting = () => {
+    const link = document.createElement("a");
+    link.href = "https://forms.gle/k2aHLvfrDdRFn8pf6";
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
-  // 2. Fungsi Download APK (Logic nyata)
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "./app/TamengTautan.apk"; // Pastikan file ini ada di folder /public
+    link.href = "./app/TamengTautan.apk";
     link.download = "TamengTautan.apk";
     document.body.appendChild(link);
     link.click();
@@ -53,23 +55,14 @@ const CTASection = () => {
 
           {/* CTA Buttons - UPDATED */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            {/* BUTTON 1: DOWNLOAD (Style disamakan dengan Hero) */}
-            <Button
-              size="lg" // Ubah xl jadi lg agar konsisten dan tidak error
-              className="gradient-primary glow-primary hover:opacity-90 transition-all text-base px-8 group"
-              onClick={handleDownload}
-            >
+            {/* BUTTON 1: DOWNLOAD */}
+            <Button size="lg" className="gradient-primary glow-primary hover:opacity-90 transition-all text-base px-8 group" onClick={handleDownload}>
               <Download className="w-6 h-6 mr-2 group-hover:animate-bounce" />
               Download Sekarang
             </Button>
 
-            {/* BUTTON 2: TESTING (Style disamakan dengan Hero) */}
-            <Button
-              size="lg" // Ubah xl jadi lg
-              variant="outline" // Pakai variant outline bawaan shadcn
-              className="border-border hover:bg-muted/50 transition-all text-base px-8"
-              onClick={() => scrollToSection("testing")}
-            >
+            {/* BUTTON 2: TESTING (Update onClick) */}
+            <Button size="lg" variant="outline" className="border-border hover:bg-muted/50 transition-all text-base px-8" onClick={handleTesting}>
               <FlaskConical className="w-6 h-6 mr-2" />
               Coba Testing URL
             </Button>
