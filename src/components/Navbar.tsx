@@ -23,6 +23,15 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "./app/TamengTautan.apk"; // Pastikan file ini ada di folder /public
+    link.download = "TamengTautan.apk";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/80 dark:bg-gray-950/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 py-3" : "bg-transparent py-5"}`}>
       <div className="container mx-auto px-4 flex items-center justify-between">
@@ -58,7 +67,9 @@ const Navbar = () => {
           </Button>
 
           {/* Button Download (Primary Style) */}
-          <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:opacity-90 transition-opacity text-white shadow-lg shadow-purple-500/25 border-0">Download APK</Button>
+          <Button onClick={handleDownload} className="bg-gradient-to-r from-purple-600 to-blue-600 hover:opacity-90 transition-opacity text-white shadow-lg shadow-purple-500/25 border-0">
+            Download APK
+          </Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -89,7 +100,9 @@ const Navbar = () => {
               <Button variant="outline" onClick={() => scrollToSection("testing")} className="w-full justify-center border-gray-300 dark:border-gray-700">
                 Coba Testing
               </Button>
-              <Button className="w-full justify-center bg-gradient-to-r from-purple-600 to-blue-600 text-white border-0">Download APK</Button>
+              <Button onClick={handleDownload} className="w-full justify-center bg-gradient-to-r from-purple-600 to-blue-600 text-white border-0">
+                Download APK
+              </Button>
             </div>
           </div>
         </div>

@@ -1,6 +1,14 @@
 import { Shield, Github, Mail, Heart } from "lucide-react";
 
 const Footer = () => {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "./app/TamengTautan.apk"; // Pastikan file ini ada di folder /public
+    link.download = "TamengTautan.apk";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <footer className="py-16 border-t border-border">
       <div className="container mx-auto px-4">
@@ -13,21 +21,12 @@ const Footer = () => {
               </div>
               <span className="text-xl font-bold text-foreground">Tameng Tautan</span>
             </div>
-            <p className="text-muted-foreground max-w-sm mb-6">
-              Real-time phishing protection powered by on-device machine learning. 
-              Your security, your privacy, your control.
-            </p>
+            <p className="text-muted-foreground max-w-sm mb-6">Real-time phishing protection powered by on-device machine learning. Your security, your privacy, your control.</p>
             <div className="flex gap-4">
-              <a
-                href="#"
-                className="w-10 h-10 rounded-lg bg-muted hover:bg-muted/80 flex items-center justify-center transition-colors"
-              >
+              <a href="#" className="w-10 h-10 rounded-lg bg-muted hover:bg-muted/80 flex items-center justify-center transition-colors">
                 <Github className="w-5 h-5 text-muted-foreground" />
               </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-lg bg-muted hover:bg-muted/80 flex items-center justify-center transition-colors"
-              >
+              <a href="#" className="w-10 h-10 rounded-lg bg-muted hover:bg-muted/80 flex items-center justify-center transition-colors">
                 <Mail className="w-5 h-5 text-muted-foreground" />
               </a>
             </div>
@@ -48,9 +47,9 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                <button onClick={handleDownload} className="text-muted-foreground hover:text-foreground transition-colors">
                   Download APK
-                </a>
+                </button>
               </li>
               <li>
                 <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
@@ -89,9 +88,7 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">
-            © 2024 Tameng Tautan. All rights reserved.
-          </p>
+          <p className="text-sm text-muted-foreground">© 2024 Tameng Tautan. All rights reserved.</p>
           <p className="text-sm text-muted-foreground flex items-center gap-1">
             Made with <Heart className="w-4 h-4 text-destructive" /> for a safer internet
           </p>

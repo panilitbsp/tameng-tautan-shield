@@ -13,7 +13,7 @@ const CTASection = () => {
   // 2. Fungsi Download APK (Logic nyata)
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/app-release.apk"; // Pastikan file ini ada di folder /public
+    link.href = "./app/TamengTautan.apk"; // Pastikan file ini ada di folder /public
     link.download = "TamengTautan.apk";
     document.body.appendChild(link);
     link.click();

@@ -10,6 +10,15 @@ const HeroSection = () => {
     }
   };
 
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "./app/TamengTautan.apk"; // Pastikan file ini ada di folder /public
+    link.download = "TamengTautan.apk";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
       {/* Background Elements */}
@@ -42,9 +51,13 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-slide-up" style={{ animationDelay: "0.2s" }}>
-              <Button size="lg" className="gradient-primary glow-primary hover:opacity-90 transition-all text-base px-8" onClick={() => scrollToSection("download")}>
-                <Download className="w-5 h-5 mr-2" />
-                Download APK
+              <Button
+                size="lg" // Ubah xl jadi lg agar konsisten dan tidak error
+                className="gradient-primary glow-primary hover:opacity-90 transition-all text-base px-8 group"
+                onClick={handleDownload}
+              >
+                <Download className="w-6 h-6 mr-2 group-hover:animate-bounce" />
+                Download Sekarang
               </Button>
 
               <Button size="lg" variant="outline" className="border-border hover:bg-muted/50 transition-all text-base px-8" onClick={() => scrollToSection("testing")}>
