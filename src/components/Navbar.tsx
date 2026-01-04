@@ -15,7 +15,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Tetap simpan ini untuk navigasi internal (Features, Demo, Docs)
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -24,7 +23,6 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
   };
 
-  // FUNGSI BARU: Handle Testing
   const handleTesting = () => {
     const link = document.createElement("a");
     link.href = "https://forms.gle/k2aHLvfrDdRFn8pf6";
@@ -33,7 +31,7 @@ const Navbar = () => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    setIsMobileMenuOpen(false); // Tutup menu mobile jika sedang terbuka
+    setIsMobileMenuOpen(false);
   };
 
   const handleDownload = () => {
@@ -59,13 +57,13 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           <button onClick={() => scrollToSection("features")} className="text-gray-600 hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-400 transition-colors font-medium">
-            Features
+            Fitur
           </button>
           <button onClick={() => scrollToSection("demo")} className="text-gray-600 hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-400 transition-colors font-medium">
             Demo
           </button>
           <button onClick={() => scrollToSection("docs")} className="text-gray-600 hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-400 transition-colors font-medium">
-            Docs
+            Dokumentasi
           </button>
         </div>
 
@@ -73,12 +71,10 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-3">
           <ThemeToggle />
 
-          {/* Button Testing (Update onClick) */}
           <Button variant="ghost" onClick={handleTesting} className="text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">
-            Coba Testing
+            Isi Form Testing
           </Button>
 
-          {/* Button Download */}
           <Button onClick={handleDownload} className="bg-gradient-to-r from-purple-600 to-blue-600 hover:opacity-90 transition-opacity text-white shadow-lg shadow-purple-500/25 border-0">
             Download APK
           </Button>
@@ -95,13 +91,13 @@ const Navbar = () => {
         <div className="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800 p-4 shadow-xl">
           <div className="flex flex-col gap-4">
             <button onClick={() => scrollToSection("features")} className="text-gray-600 dark:text-gray-400 hover:text-purple-600 transition-colors text-left py-2 font-medium">
-              Features
+              Fitur
             </button>
             <button onClick={() => scrollToSection("demo")} className="text-gray-600 dark:text-gray-400 hover:text-purple-600 transition-colors text-left py-2 font-medium">
               Demo
             </button>
             <button onClick={() => scrollToSection("docs")} className="text-gray-600 dark:text-gray-400 hover:text-purple-600 transition-colors text-left py-2 font-medium">
-              Docs
+              Dokumentasi
             </button>
 
             <div className="flex flex-col gap-3 pt-4 border-t border-gray-200 dark:border-gray-800">
@@ -110,7 +106,6 @@ const Navbar = () => {
                 <ThemeToggle />
               </div>
 
-              {/* Mobile Button Testing (Update onClick) */}
               <Button variant="outline" onClick={handleTesting} className="w-full justify-center border-gray-300 dark:border-gray-700">
                 Coba Testing
               </Button>

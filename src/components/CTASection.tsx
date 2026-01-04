@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Download, FlaskConical, Shield } from "lucide-react";
 
 const CTASection = () => {
-  // FUNGSI BARU: Handle Testing
   const handleTesting = () => {
     const link = document.createElement("a");
     link.href = "https://forms.gle/k2aHLvfrDdRFn8pf6";
@@ -28,18 +27,18 @@ const CTASection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
 
       {/* Animated orbs */}
-      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/20 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-secondary/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }} />
+      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-purple-700/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-400/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }} />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Logo */}
           <div className="flex justify-center mb-6">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-accent blur-2xl opacity-50 scale-150" />
-              <div className="relative w-20 h-20 rounded-2xl bg-gradient-to-br from-primary to-secondary p-4 animate-glow-pulse">
-                <Shield className="w-full h-full text-primary-foreground" />
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-purple-400 to-blue-500 blur-2xl opacity-50 scale-150" />
+              <div className="relative w-20 h-20 rounded-2xl bg-gradient-to-br from-purple-600 to-blue-600 p-4 animate-glow-pulse">
+                <Shield className="w-full h-full text-white" />
               </div>
             </div>
           </div>
@@ -48,23 +47,22 @@ const CTASection = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
             <span className="text-foreground">Siap Melindungi Dirimu dari</span>
             <br />
-            <span className="text-gradient-primary">Link Berbahaya?</span>
+            {/* GRADIENT UPDATED: dark:to-purple-900 */}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-900 to-purple-400 dark:from-purple-400 dark:to-purple-900">Link Berbahaya?</span>
           </h2>
 
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Download TamengTautan sekarang dan rasakan keamanan digital yang lebih baik saat chatting.</p>
 
-          {/* CTA Buttons - UPDATED */}
+          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            {/* BUTTON 1: DOWNLOAD */}
             <Button size="lg" className="gradient-primary glow-primary hover:opacity-90 transition-all text-base px-8 group" onClick={handleDownload}>
               <Download className="w-6 h-6 mr-2 group-hover:animate-bounce" />
               Download Sekarang
             </Button>
 
-            {/* BUTTON 2: TESTING (Update onClick) */}
             <Button size="lg" variant="outline" className="border-border hover:bg-muted/50 transition-all text-base px-8" onClick={handleTesting}>
               <FlaskConical className="w-6 h-6 mr-2" />
-              Coba Testing URL
+              Isi Form Testing
             </Button>
           </div>
 

@@ -12,7 +12,7 @@ const HeroSection = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "./app/TamengTautan.apk"; // Pastikan file ini ada di folder /public
+    link.href = "./app/TamengTautan.apk";
     link.download = "TamengTautan.apk";
     document.body.appendChild(link);
     link.click();
@@ -30,39 +30,42 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-          {/* Left Content */}
+          {/* --- BAGIAN 1: GAMBAR (Kiri) --- */}
+          <div className="flex justify-center lg:justify-center transition-transform duration-500">
+            <div className="w-[80%] max-w-sm sm:max-w-md lg:max-w-[520px]">
+              <PhoneMockup />
+            </div>
+          </div>
+
+          {/* --- BAGIAN 2: TULISAN (Kanan) --- */}
           <div className="space-y-8 text-center lg:text-left">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full animate-fade-in">
               <span className="w-2 h-2 bg-success rounded-full animate-pulse" />
-              <span className="text-sm text-muted-foreground">Powered by On-Device ML</span>
+              <span className="text-sm text-muted-foreground">Ditenagai Machine Learning Lokal</span>
             </div>
 
             {/* Headline */}
             <h1 className="text-4xl md:text-5xl xl:text-7xl font-black leading-tight animate-slide-up">
-              Real-Time Protection Against {/* PERUBAHAN DISINI: */}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-900 to-purple-400">Phishing Links</span>
+              Perlindungan Real-Time Dari {/* GRADIENT UPDATED: dark:to-purple-900 */}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-900 to-purple-400 dark:from-purple-400 dark:to-purple-900">Serangan Phishing</span>
             </h1>
 
             {/* Sub-headline */}
             <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 animate-slide-up" style={{ animationDelay: "0.1s" }}>
-              Tameng Tautan runs silently in the background, analyzing every link on your screen before you click. Secure your digital life with on-device AI classification.
+              Tameng Tautan berjalan senyap di latar belakang, menganalisis setiap link di layarmu sebelum diklik. Amankan kehidupan digitalmu dengan klasifikasi AI langsung di perangkat.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-slide-up" style={{ animationDelay: "0.2s" }}>
-              <Button
-                size="lg" // Ubah xl jadi lg agar konsisten dan tidak error
-                className="gradient-primary glow-primary hover:opacity-90 transition-all text-base px-8 group"
-                onClick={handleDownload}
-              >
+              <Button size="lg" className="gradient-primary glow-primary hover:opacity-90 transition-all text-base px-8 group" onClick={handleDownload}>
                 <Download className="w-6 h-6 mr-2 group-hover:animate-bounce" />
                 Download Sekarang
               </Button>
 
               <Button size="lg" variant="outline" className="border-border hover:bg-muted/50 transition-all text-base px-8" onClick={() => scrollToSection("testing")}>
                 <FlaskConical className="w-5 h-5 mr-2" />
-                Coba Testing URL
+                Isi Form Testing
               </Button>
             </div>
 
@@ -70,22 +73,17 @@ const HeroSection = () => {
             <div className="flex flex-wrap gap-8 justify-center lg:justify-start pt-4 animate-slide-up" style={{ animationDelay: "0.3s" }}>
               <div>
                 <p className="text-2xl md:text-3xl font-bold text-foreground">99.2%</p>
-                <p className="text-sm text-muted-foreground">Detection Rate</p>
+                <p className="text-sm text-muted-foreground">Tingkat Deteksi</p>
               </div>
               <div>
                 <p className="text-2xl md:text-3xl font-bold text-foreground">&lt;50ms</p>
-                <p className="text-sm text-muted-foreground">Analysis Time</p>
+                <p className="text-sm text-muted-foreground">Waktu Analisis</p>
               </div>
               <div>
-                a<p className="text-2xl md:text-3xl font-bold text-foreground">0</p>
-                <p className="text-sm text-muted-foreground">Data Sent</p>
+                <p className="text-2xl md:text-3xl font-bold text-foreground">0</p>
+                <p className="text-sm text-muted-foreground">Data Terkirim</p>
               </div>
             </div>
-          </div>
-
-          {/* Right Content - Phone Mockup */}
-          <div className="flex justify-center lg:justify-center lg:-translate-x-12 transition-transform duration-500">
-            <PhoneMockup />
           </div>
         </div>
       </div>

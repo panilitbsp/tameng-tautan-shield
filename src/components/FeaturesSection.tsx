@@ -1,55 +1,46 @@
-import { 
-  Eye, 
-  Cpu, 
-  SlidersHorizontal, 
-  Link2, 
-  Shield, 
-  Zap,
-  Lock,
-  Bell
-} from "lucide-react";
+import { Eye, Cpu, SlidersHorizontal, Link2, Shield, Zap, Lock, Bell } from "lucide-react";
 
 const features = [
   {
     icon: Eye,
-    title: "Real-time Detection",
-    description: "Background monitoring for WhatsApp, SMS, and other apps. Tameng Tautan watches your screen 24/7."
+    title: "Deteksi Real-time",
+    description: "Pemantauan latar belakang untuk WhatsApp, SMS, dan aplikasi lain. Tameng Tautan menjaga layarmu 24/7.",
   },
   {
     icon: Cpu,
-    title: "XGBoost Algorithm",
-    description: "High-speed, on-device classification without sacrificing privacy. No data leaves your phone."
+    title: "Algoritma XGBoost",
+    description: "Klasifikasi berkecepatan tinggi di perangkat tanpa mengorbankan privasi. Tidak ada data yang keluar dari ponselmu.",
   },
   {
     icon: SlidersHorizontal,
-    title: "Risk Threshold Tuning",
-    description: "Customize sensitivity to your needs. Set your own risk score threshold for alerts."
+    title: "Atur Batas Risiko",
+    description: "Sesuaikan sensitivitas dengan kebutuhanmu. Tentukan sendiri ambang batas skor risiko untuk peringatan.",
   },
   {
     icon: Link2,
-    title: "Short-link Decipher",
-    description: "Automatically expands bit.ly, s.id, and other shortened links to inspect the final destination."
+    title: "Pengurai Short-link",
+    description: "Secara otomatis memperluas bit.ly, s.id, dan tautan pendek lainnya untuk memeriksa tujuan akhir.",
   },
   {
     icon: Shield,
-    title: "Privacy First",
-    description: "All processing happens on your device. Zero data collection, zero tracking, zero cloud uploads."
+    title: "Utamakan Privasi",
+    description: "Semua pemrosesan terjadi di perangkatmu. Nol pengumpulan data, nol pelacakan, nol unggahan cloud.",
   },
   {
     icon: Zap,
-    title: "Lightning Fast",
-    description: "Analysis completes in under 50ms. You won't even notice it's running in the background."
+    title: "Sangat Cepat",
+    description: "Analisis selesai dalam waktu kurang dari 50ms. Kamu bahkan tidak akan menyadari aplikasi sedang berjalan.",
   },
   {
     icon: Lock,
-    title: "Secure by Design",
-    description: "Uses Android's accessibility services responsibly with minimal permissions required."
+    title: "Aman Secara Desain",
+    description: "Menggunakan layanan aksesibilitas Android secara bertanggung jawab dengan izin minimal yang diperlukan.",
   },
   {
     icon: Bell,
-    title: "Smart Notifications",
-    description: "Custom overlay alerts that don't interrupt your workflow. Dismiss or investigate with one tap."
-  }
+    title: "Notifikasi Pintar",
+    description: "Peringatan overlay kustom yang tidak mengganggu aktivitasmu. Tutup atau periksa detail dengan satu ketukan.",
+  },
 ];
 
 const FeaturesSection = () => {
@@ -64,24 +55,18 @@ const FeaturesSection = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-primary font-medium text-sm uppercase tracking-wider">Features</span>
+          <span className="text-primary font-medium text-sm uppercase tracking-wider">Fitur</span>
           <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6">
-            Everything You Need for{" "}
-            <span className="text-gradient">Complete Protection</span>
+            Segala yang Kamu Butuhkan untuk {/* GRADIENT UPDATED */}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-900 to-purple-400 dark:from-purple-400 dark:to-purple-900">Perlindungan Total</span>
           </h2>
-          <p className="text-muted-foreground text-lg">
-            Tameng Tautan combines cutting-edge machine learning with privacy-first design to keep you safe from phishing attacks.
-          </p>
+          <p className="text-muted-foreground text-lg">Tameng Tautan menggabungkan machine learning terkini dengan desain yang mengutamakan privasi untuk menjagamu aman dari serangan phishing.</p>
         </div>
 
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
-            <div
-              key={feature.title}
-              className="glass-card rounded-2xl p-6 hover:bg-muted/20 transition-all duration-300 group"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
+            <div key={feature.title} className="glass-card rounded-2xl p-6 hover:bg-muted/20 transition-all duration-300 group" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="w-12 h-12 rounded-xl gradient-primary flex items-center justify-center mb-4 group-hover:glow-primary transition-all">
                 <feature.icon className="w-6 h-6 text-primary-foreground" />
               </div>
