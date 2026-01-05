@@ -74,15 +74,11 @@ const docsSections = [
         },
         {
           title: "Model Deteksi",
-          content: "Pilih antara mode 'Standar' untuk deteksi seimbang atau mode 'Agresif' untuk keamanan maksimal (mungkin menghasilkan lebih banyak positif palsu).",
+          content: "Pilih antara model Decision Tree, Gaussian Naive Bayes, K-Nearest Neighbors, atau XGBoost (sebagai model utama) untuk keamanan maksimal.",
         },
         {
-          title: "Whitelist Aplikasi",
-          content: "Kecualikan aplikasi tertentu dari pemantauan jika kamu mempercayainya sepenuhnya. Buka Pengaturan → Whitelist Aplikasi untuk mengelola pengecualian.",
-        },
-        {
-          title: "Gaya Notifikasi",
-          content: "Pilih antara mode 'Overlay' (peringatan layar penuh), 'Banner' (notifikasi ringkas), atau 'Senyap' (hanya pencatatan).",
+          title: "Backup Riwayat ke Cloud",
+          content: "Aktifkan sinkronisasi ke Supabase untuk mencadangkan riwayat deteksi secara aman. Jika tidak diaktifkan, data hanya tersimpan secara lokal di perangkatmu.",
         },
       ],
     },
@@ -136,8 +132,7 @@ const DocsSection = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-primary font-medium text-sm uppercase tracking-wider">Dokumentasi</span>
           <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6">
-            Segala yang Kamu Butuhkan untuk {/* GRADIENT UPDATED: dark:to-purple-900 */}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-900 to-purple-400 dark:from-purple-400 dark:to-purple-900">Memulai</span>
+            Segala yang Kamu Butuhkan untuk <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-900 to-purple-400 dark:from-purple-400 dark:to-purple-900">Memulai</span>
           </h2>
           <p className="text-muted-foreground text-lg">Panduan lengkap untuk membantumu mengatur dan menggunakan Tameng Tautan secara efektif.</p>
         </div>
