@@ -49,10 +49,10 @@ const HeroSection = () => {
 
             {/* Headline */}
             <h1 className="text-4xl md:text-5xl xl:text-7xl font-black leading-tight animate-slide-up">
-              Perlindungan Realtime dari{" "}
+              Perlindungan Realtime Dari{" "}
               {/* GRADIENT UPDATED: dark:to-purple-900 */}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-900 to-purple-400 dark:from-purple-400 dark:to-purple-900">
-                Serangan Phishing
+                Tautan Berbahaya
               </span>
             </h1>
 
