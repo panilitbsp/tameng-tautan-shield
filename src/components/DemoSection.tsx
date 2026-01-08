@@ -47,7 +47,7 @@ const DemoSection = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
-          className="mx-auto mt-24 w-full lg:w-[80%] aspect-video shadow-lg rounded-2xl"
+          className="mx-auto mt-24 w-full lg:w-[80%] aspect-video shadow-lg rounded-xl"
         ></iframe>
       </div>
     </section>
