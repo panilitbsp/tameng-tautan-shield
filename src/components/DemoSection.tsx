@@ -41,13 +41,14 @@ const DemoSection = () => {
             className="hidden dark:block max-w-full h-auto"
           />
         </div>
+
         <iframe
           src="https://www.youtube.com/embed/sx17ldUwRJI?si=lI9ef7JjFD4hLjle"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
-          className="mx-auto mt-24 w-full lg:w-[80%] aspect-video shadow-lg rounded-2xl"
+          className="mx-auto mt-20 w-full lg:w-[80%] aspect-video shadow-lg rounded-2xl"
         ></iframe>
       </div>
     </section>
