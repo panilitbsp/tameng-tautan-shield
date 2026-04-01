@@ -16,7 +16,7 @@ const PrivacyPolicy = () => {
         <div className="max-w-none">
           <h1 className="text-3xl font-bold mb-2">Kebijakan Privasi Tameng Tautan</h1>
           {/* Jangan lupa ubah tanggal di bawah ini jika diperlukan */}
-          <p className="text-muted-foreground mb-10">Terakhir diperbarui: 7 Januari 2026</p>
+          <p className="text-muted-foreground mb-10">Terakhir diperbarui: 1 April 2026</p>
 
           <div className="space-y-8 text-foreground leading-relaxed">
             <section>
