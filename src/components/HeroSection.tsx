@@ -1,4 +1,4 @@
-import { Download, FlaskConical } from "lucide-react";
+import { Play, FlaskConical } from "lucide-react"; // Ubah Download menjadi Play
 import { Button } from "@/components/ui/button";
 import PhoneMockup from "./PhoneMockup";
 
@@ -11,12 +11,7 @@ const HeroSection = () => {
   };
 
   const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "./app/TamengTautan.apk";
-    link.download = "TamengTautan.apk";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    window.open("https://play.google.com/store/apps/details?id=com.siva.tamengtautan", "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -76,20 +71,9 @@ const HeroSection = () => {
                 className="gradient-primary glow-primary hover:opacity-90 transition-all text-base px-8 group"
                 onClick={handleDownload}
               >
-                <Download className="w-6 h-6 mr-2 group-hover:animate-bounce" />
-                Download Sekarang
+                <Play className="w-6 h-6 mr-2 group-hover:animate-pulse fill-current" />
+                Dapatkan di Google Play
               </Button>
-
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-border hover:bg-muted/50 transition-all text-base px-8"
-                onClick={() => scrollToSection("testing")}
-              >
-                <FlaskConical className="w-5 h-5 mr-2" />
-                Isi Form Testing
-              </Button>
-            </div>
 
             {/* Stats */}
             <div

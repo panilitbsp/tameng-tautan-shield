@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Download, FlaskConical, Shield } from "lucide-react";
+import { Play, FlaskConical, Shield } from "lucide-react"; // Ubah Download menjadi Play
 
 const CTASection = () => {
   const handleTesting = () => {
@@ -13,12 +13,7 @@ const CTASection = () => {
   };
 
   const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "./app/TamengTautan.apk";
-    link.download = "TamengTautan.apk";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    window.open("https://play.google.com/store/apps/details?id=com.siva.tamengtautan", "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -56,8 +51,9 @@ const CTASection = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Button size="lg" className="gradient-primary glow-primary hover:opacity-90 transition-all text-base px-8 group" onClick={handleDownload}>
-              <Download className="w-6 h-6 mr-2 group-hover:animate-bounce" />
-              Download Sekarang
+              {/* Menggunakan ikon Play dengan efek fill */}
+              <Play className="w-6 h-6 mr-2 group-hover:animate-pulse fill-current" />
+              Dapatkan di Google Play
             </Button>
 
             <Button size="lg" variant="outline" className="border-border hover:bg-muted/50 transition-all text-base px-8" onClick={handleTesting}>

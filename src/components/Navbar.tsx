@@ -35,51 +35,30 @@ const Navbar = () => {
   };
 
   const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "./app/TamengTautan.apk";
-    link.download = "TamengTautan.apk";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    window.open("https://play.google.com/store/apps/details?id=com.siva.tamengtautan", "_blank", "noopener,noreferrer");
+    setIsMobileMenuOpen(false); // Menutup menu mobile jika diklik dari sana
   };
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/80 dark:bg-gray-950/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 py-3"
-          : "bg-transparent py-5"
-      }`}
-    >
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/80 dark:bg-gray-950/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 py-3" : "bg-transparent py-5"}`}>
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex items-center gap-2 cursor-pointer">
           <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center shadow-lg shadow-purple-500/20">
             <Shield className="w-5 h-5 text-white" />
           </div>
-          <span className="text-xl font-bold text-gray-900 dark:text-white">
-            Tameng Tautan
-          </span>
+          <span className="text-xl font-bold text-gray-900 dark:text-white">Tameng Tautan</span>
         </a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          <button
-            onClick={() => scrollToSection("features")}
-            className="text-gray-600 hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-400 transition-colors font-medium"
-          >
+          <button onClick={() => scrollToSection("features")} className="text-gray-600 hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-400 transition-colors font-medium">
             Fitur
           </button>
-          <button
-            onClick={() => scrollToSection("demo")}
-            className="text-gray-600 hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-400 transition-colors font-medium"
-          >
+          <button onClick={() => scrollToSection("demo")} className="text-gray-600 hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-400 transition-colors font-medium">
             Demo
           </button>
-          <button
-            onClick={() => scrollToSection("docs")}
-            className="text-gray-600 hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-400 transition-colors font-medium"
-          >
+          <button onClick={() => scrollToSection("docs")} className="text-gray-600 hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-400 transition-colors font-medium">
             Dokumentasi
           </button>
         </div>
@@ -88,32 +67,18 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-3">
           <ThemeToggle />
 
-          <Button
-            variant="ghost"
-            onClick={handleTesting}
-            className="text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
-          >
+          <Button variant="ghost" onClick={handleTesting} className="text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">
             Isi Form Testing
           </Button>
 
-          <Button
-            onClick={handleDownload}
-            className="bg-gradient-to-r from-purple-600 to-blue-600 hover:opacity-90 transition-opacity text-white shadow-lg shadow-purple-500/25 border-0"
-          >
-            Download APK
+          <Button onClick={handleDownload} className="bg-gradient-to-r from-purple-600 to-blue-600 hover:opacity-90 transition-opacity text-white shadow-lg shadow-purple-500/25 border-0">
+            Google Play
           </Button>
         </div>
 
         {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-gray-900 dark:text-white"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? (
-            <X className="w-6 h-6" />
-          ) : (
-            <Menu className="w-6 h-6" />
-          )}
+        <button className="md:hidden text-gray-900 dark:text-white" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
@@ -121,22 +86,13 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800 p-4 shadow-xl">
           <div className="flex flex-col gap-4">
-            <button
-              onClick={() => scrollToSection("features")}
-              className="text-gray-600 dark:text-gray-400 hover:text-purple-600 transition-colors text-left py-2 font-medium"
-            >
+            <button onClick={() => scrollToSection("features")} className="text-gray-600 dark:text-gray-400 hover:text-purple-600 transition-colors text-left py-2 font-medium">
               Fitur
             </button>
-            <button
-              onClick={() => scrollToSection("demo")}
-              className="text-gray-600 dark:text-gray-400 hover:text-purple-600 transition-colors text-left py-2 font-medium"
-            >
+            <button onClick={() => scrollToSection("demo")} className="text-gray-600 dark:text-gray-400 hover:text-purple-600 transition-colors text-left py-2 font-medium">
               Demo
             </button>
-            <button
-              onClick={() => scrollToSection("docs")}
-              className="text-gray-600 dark:text-gray-400 hover:text-purple-600 transition-colors text-left py-2 font-medium"
-            >
+            <button onClick={() => scrollToSection("docs")} className="text-gray-600 dark:text-gray-400 hover:text-purple-600 transition-colors text-left py-2 font-medium">
               Dokumentasi
             </button>
 
@@ -146,19 +102,12 @@ const Navbar = () => {
                 <ThemeToggle />
               </div>
 
-              <Button
-                variant="outline"
-                onClick={handleTesting}
-                className="w-full justify-center border-gray-300 dark:border-gray-700"
-              >
+              <Button variant="outline" onClick={handleTesting} className="w-full justify-center border-gray-300 dark:border-gray-700">
                 Coba Testing
               </Button>
 
-              <Button
-                onClick={handleDownload}
-                className="w-full justify-center bg-gradient-to-r from-purple-600 to-blue-600 text-white border-0"
-              >
-                Download APK
+              <Button onClick={handleDownload} className="w-full justify-center bg-gradient-to-r from-purple-600 to-blue-600 text-white border-0">
+                Dapatkan di Google Play
               </Button>
             </div>
           </div>
